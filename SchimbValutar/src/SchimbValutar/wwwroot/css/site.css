@@ -3,6 +3,15 @@
     padding-bottom: 20px;
 }
 
+a, a:hover, a:focus {
+    text-decoration: none;
+    outline: 0;
+}
+
+a {
+    transition: all 0.3s ease-out;
+}
+
 /* Wrapping element */
 /* Set some basic padding to keep content from hitting the edges */
 /*.body-content {
@@ -25,19 +34,19 @@ textarea {
 
 /* buttons and links extension to use brackets: [ click me ] */
 .btn-bracketed::before {
-    display:inline-block;
+    display: inline-block;
     content: "[";
     padding-right: 0.5em;
 }
+
 .btn-bracketed::after {
-    display:inline-block;
+    display: inline-block;
     content: "]";
     padding-left: 0.5em;
 }
 
 /* Make .svg files in the carousel display properly in older browsers */
-.carousel-inner .item img[src$=".svg"]
-{
+.carousel-inner .item img[src$=".svg"] {
     width: 100%;
 }
 
@@ -46,6 +55,7 @@ textarea {
     background-color: #fff;
     border-bottom: 0;
 }
+
 .navbar-brand {
     height: auto;
     padding: 15px 0;
@@ -56,9 +66,9 @@ textarea {
     padding: 40px 15px;
 }
 
-.navbar-inverse .navbar-nav > li > a:hover {
-    color: #009393;
-}
+    .navbar-inverse .navbar-nav > li > a:hover {
+        color: #009393;
+    }
 
 .navbar-inverse .navbar-right > li > a {
     color: #00585f;
@@ -67,19 +77,22 @@ textarea {
     padding: 6px 12px;
     margin: 34px 0;
 }
-.navbar-inverse .navbar-right > li > a:hover {
-    background: #f0f0f0;
-    color: #00585f;
-}
 
-.navbar-inverse .navbar-right > li > a.btn-register {
-    margin-left: 10px;
-    color: #fff;
-    background: #00585f;
-}
-.navbar-inverse .navbar-right > li > a.btn-register:hover {
-    background: #009393;
-}
+    .navbar-inverse .navbar-right > li > a:hover {
+        background: #f0f0f0;
+        color: #00585f;
+    }
+
+    .navbar-inverse .navbar-right > li > a.btn-register {
+        margin-left: 10px;
+        color: #fff;
+        background: #00585f;
+    }
+
+        .navbar-inverse .navbar-right > li > a.btn-register:hover {
+            background: #009393;
+        }
+
 .navbar-inverse .navbar-toggle, .navbar-inverse .navbar-toggle:hover, .navbar-inverse .navbar-toggle:focus {
     background-color: #00585f;
 }
@@ -89,10 +102,11 @@ textarea {
     max-height: 600px;
     overflow: hidden;
 }
-#myCarousel .carousel-caption {
-    padding: 0;
-    bottom: 50%;
-}
+
+    #myCarousel .carousel-caption {
+        padding: 0;
+        bottom: 50%;
+    }
 
 .exchange-rate-bar {
     height: 46px;
@@ -102,20 +116,21 @@ textarea {
     margin-top: -120px;
     overflow: hidden;
 }
-.exchange-rate-bar li {
-    float: left;
-    padding: 12px 12px 12px 24px;
-    font-size: 16px;
-    font-weight: bold;
-    color: #fff;
-}
-.exchange-rate-bar .exchange-rate-title {
-    background: #00585f;
-    color: #FF3800;
-    padding: 6px 24px;
-    font-size: 24px;
-    
-}
+
+    .exchange-rate-bar li {
+        float: left;
+        padding: 12px 12px 12px 24px;
+        font-size: 16px;
+        font-weight: bold;
+        color: #fff;
+    }
+
+    .exchange-rate-bar .exchange-rate-title {
+        background: #00585f;
+        color: #FF3800;
+        padding: 6px 24px;
+        font-size: 24px;
+    }
 
 .currency-table {
     background: #009393;
@@ -125,20 +140,25 @@ textarea {
 section {
     padding: 50px;
 }
+
 .first-section {
     padding: 0;
 }
+
 .alternate-section {
     background: #00585f;
     padding: 0;
 }
-.alternate-section h5{
-    color: #fff;
-    margin-top: 50px;
-}
-.alternate-section .blog-item {
-    margin-bottom: 50px;
-}
+
+    .alternate-section h5 {
+        color: #fff;
+        margin-top: 50px;
+    }
+
+    .alternate-section .blog-item {
+        margin-bottom: 50px;
+    }
+
 h5 {
     font-size: 24px;
     font-weight: 300;
@@ -147,18 +167,24 @@ h5 {
     padding-left: 50px;
     position: relative;
 }
-h5:before {
-    content: '';
-    border: 5px solid #FF3800;
-    height: 52px;
-    width: 35px;
-    position: absolute;
-    top: -7px;
-    left: 0;
-}
-h5 span {
-    font-weight: bold;
-}
+
+    h5:before {
+        content: '';
+        border: 5px solid #FF3800;
+        height: 52px;
+        width: 35px;
+        position: absolute;
+        top: -7px;
+        left: 0;
+    }
+
+    h5 span {
+        font-weight: bold;
+    }
+
+    h5 + p {
+        margin-bottom: 18px;
+    }
 
 .btn.btn-default {
     border-radius: 15px;
@@ -166,49 +192,225 @@ h5 span {
     color: #fff;
     border: none;
 }
-.btn.btn-default:hover {
-    background: #009393;
+
+    .btn.btn-default:hover {
+        background: #009393;
+    }
+
+.service {
+    position: relative;
+    overflow: hidden;
+}
+
+    .service:hover .title-section {
+        height: 100%;
+        cursor: pointer;
+    }
+
+    .service .title-section {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        background-color: rgba(0, 88, 95, 0.8);
+        width: 100%;
+        height: 50px;
+        transition: .4s;
+    }
+
+        .service .title-section .icon {
+            background-color: #FF3800;
+            width: 50px;
+            height: 50px;
+            position: absolute;
+            top: 0;
+            left: 0;
+            text-align: center;
+            line-height: 50px;
+            font-size: 27px;
+            color: #fff;
+        }
+
+        .service .title-section .title {
+            color: #fff;
+            width: 100%;
+            display: block;
+            font-weight: 600;
+            color: #fff;
+            text-align: left;
+            padding-left: 70px;
+            line-height: 50px;
+            font-size: 18px;
+        }
+
+            .service .title-section .title a {
+                color: #fff;
+                font-size: 100%;
+                text-transform: uppercase;
+                text-decoration: none;
+                outline: 0;
+            }
+
+        .service .title-section .description {
+            color: #eee;
+            padding: 30px 30px 15px 30px;
+        }
+
+        .service .title-section .readmore {
+            padding: 0 30px;
+            font-size: 16px;
+            text-transform: uppercase;
+            font-weight: 600;
+        }
+
+            .service .title-section .readmore a {
+                color: #ff3800;
+            }
+
+                .service .title-section .readmore a:hover {
+                    color: #fff;
+                }
+
+
+a.thumbnail:hover {
+    border: none;
+}
+
+a.thumbnail {
+    border: none;
+    padding: 0;
+    margin-bottom: 0;
+}
+
+.blog-item .image {
+    border-bottom: 3px solid #fff;
+    position: relative;
+}
+
+    .blog-item .image .overlay {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background: rgba(255, 56, 0, 0.50);
+        top: 0;
+        left: 0;
+        opacity: 0;
+        transition: 0.4s;
+    }
+
+        .blog-item .image .overlay span {
+            position: absolute;
+            width: 50px;
+            height: 50px;
+            background-color: #fff;
+            color: #ff3800;
+            top: 50%;
+            left: 50%;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 53px;
+            font-size: 44px;
+            font-weight: 500;
+            opacity: 1;
+            margin-left: -25px;
+            margin-top: -25px;
+            transition: 0.4s;
+            font-family: 'Raleway';
+        }
+
+    .blog-item .image:hover .overlay {
+        opacity: 1;
+    }
+.blog-item .title {
+    margin: 10px 0;
+}
+.blog-item .title a {
+    font-size: 18px;
+    color: #fff;
+    font-weight: 600;
+}
+.blog-item .date {
+    color: #ff3800;
+    font-size: 14px;
+    margin-right: 5px;
+    margin-top: -2px;
+}
+.blog-item .date i {
+        font-size: 20px;
+    margin-right: 5px;
+    line-height: 25px;
+}
+.currency-table {
+    padding: 40px 36px 36px 36px;
+}
+.currency-table h4 {
+    font-family: Raleway, Arial, Helvetica, sans-serif !important;
+    font-size: 17px ;
+    font-weight: 600 ;
+    margin-bottom: 16px;
+    margin-top: 0;
+}
+table {
+    width: 100%;
+}
+table tr {
+    height: 35px;
+    line-height: 35px;
+    border-top: 1px solid #fff;
+}
+table td {
+    background: transparent !important;
+    font-size: 15px;
+    text-align: center;
+    border:none;
 }
 
 /* Hide/rearrange for smaller screens */
 @media screen and (max-width: 767px) {
-  /* Hide captions */
-  .carousel-caption {
-    display: none
-  }
-  .exchange-rate-bar {
-      display: none;
-  }
-  .navbar-toggle {
-      margin: 33px 15px 33px 0px;
-  }
-  .navbar-inverse .navbar-nav {
-      margin: 0;
-  }
-  .navbar-inverse .navbar-nav li {
-      height: 40px;
-      background: #00585f;
-      
-      border-bottom: 1px solid rgba(0, 0, 0, 0.2);
-      overflow: hidden;
-  }
-  .navbar-inverse .navbar-nav li a {
-      color: #fff;
-      padding: 10px 15px;
-  }
-   .navbar-inverse .navbar-right li a {
-       margin: 0;
-       background: transparent !important;
-       color: #fff;
-       border-radius: 0;
-   }
-   .navbar-inverse .navbar-right li a:hover {
-       color: #009393;
-   }
-    .navbar-inverse .navbar-right li a.btn-register {
+    /* Hide captions */
+    .carousel-caption {
+        display: none;
+    }
+
+    .exchange-rate-bar {
+        display: none;
+    }
+
+    .navbar-toggle {
+        margin: 33px 15px 33px 0px;
+    }
+
+    .navbar-inverse .navbar-nav {
         margin: 0;
     }
-    .navbar-inverse .navbar-right li a.btn-register:hover {
-        color: #009393;
+
+        .navbar-inverse .navbar-nav li {
+            height: 40px;
+            background: #00585f;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+            overflow: hidden;
+        }
+
+            .navbar-inverse .navbar-nav li a {
+                color: #fff;
+                padding: 10px 15px;
+            }
+
+    .navbar-inverse .navbar-right li a {
+        margin: 0;
+        background: transparent !important;
+        color: #fff;
+        border-radius: 0;
     }
+
+        .navbar-inverse .navbar-right li a:hover {
+            color: #009393;
+        }
+
+        .navbar-inverse .navbar-right li a.btn-register {
+            margin: 0;
+        }
+
+            .navbar-inverse .navbar-right li a.btn-register:hover {
+                color: #009393;
+            }
 }
