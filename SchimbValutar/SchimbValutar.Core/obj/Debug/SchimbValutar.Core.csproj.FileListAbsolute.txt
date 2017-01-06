@@ -1,5 +1,0 @@
-C:\Facultate\Anul 3 Sem 1\dot NET\SchimbValutarDotNet\SchimbValutar\SchimbValutar.Core\bin\Debug\SchimbValutar.Core.dll
-C:\Facultate\Anul 3 Sem 1\dot NET\SchimbValutarDotNet\SchimbValutar\SchimbValutar.Core\bin\Debug\SchimbValutar.Core.pdb
-C:\Facultate\Anul 3 Sem 1\dot NET\SchimbValutarDotNet\SchimbValutar\SchimbValutar.Core\obj\Debug\SchimbValutar.Core.csprojResolveAssemblyReference.cache
-C:\Facultate\Anul 3 Sem 1\dot NET\SchimbValutarDotNet\SchimbValutar\SchimbValutar.Core\obj\Debug\SchimbValutar.Core.dll
-C:\Facultate\Anul 3 Sem 1\dot NET\SchimbValutarDotNet\SchimbValutar\SchimbValutar.Core\obj\Debug\SchimbValutar.Core.pdb
