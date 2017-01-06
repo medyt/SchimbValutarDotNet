@@ -1,0 +1,96 @@
+@using Domain_Entities
+@model IEnumerable<Card>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.ClientId)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CursValutarStabilit)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DataTranzactie)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DenumireCard)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.NumarBonFiscal)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.NumarCard)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.NumarChitantaSchimbValutar)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.SerieChitantaSchimbValutar)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.SumaTranzactionata)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ValoareLei)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Valuta)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.ClientId)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CursValutarStabilit)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DataTranzactie)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DenumireCard)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.NumarBonFiscal)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.NumarCard)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.NumarChitantaSchimbValutar)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SerieChitantaSchimbValutar)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SumaTranzactionata)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ValoareLei)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Valuta)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

@@ -1,0 +1,89 @@
+@using Domain_Entities
+@model Card
+
+@{
+    ViewData["Title"] = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>Card</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.ClientId)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.ClientId)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.CursValutarStabilit)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.CursValutarStabilit)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.DataTranzactie)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.DataTranzactie)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.DenumireCard)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.DenumireCard)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.NumarBonFiscal)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.NumarBonFiscal)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.NumarCard)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.NumarCard)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.NumarChitantaSchimbValutar)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.NumarChitantaSchimbValutar)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.SerieChitantaSchimbValutar)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.SerieChitantaSchimbValutar)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.SumaTranzactionata)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.SumaTranzactionata)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.ValoareLei)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.ValoareLei)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Valuta)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Valuta)
+        </dd>
+    </dl>
+    
+    <form asp-action="Delete">
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            <a asp-action="Index">Back to List</a>
+        </div>
+    </form>
+</div>

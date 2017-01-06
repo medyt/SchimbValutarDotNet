@@ -1,0 +1,17 @@
+{
+  "version": "1.0.0-*",
+
+  "dependencies": {
+    "DatabaseSettings": "1.0.0-*",
+    "Domain Entities": "1.0.0-*",
+    "Microsoft.Extensions.Options": "1.1.0",
+    "MongoDB.Driver": "2.4.1",
+    "NETStandard.Library": "1.6.1"
+  },
+
+  "frameworks": {
+    "netstandard1.6": {
+      "imports": "dnxcore50"
+    }
+  }
+}

@@ -1,0 +1,54 @@
+@model Domain_Entities.Valuta
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Valuta</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.AcronimValuta)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.AcronimValuta)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.DenumireValuta)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.DenumireValuta)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Multiplu)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Multiplu)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.NumarCurentValuta)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.NumarCurentValuta)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.PozitieValuta)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.PozitieValuta)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.TipValuta)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.TipValuta)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.Id">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>

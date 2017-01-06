@@ -1,0 +1,102 @@
+@using Domain_Entities
+@model IEnumerable<Casier>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.AccesCasaLeiValuta)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.AccesOperatiiTransfer)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.AccesRaportAdaosLunar)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.AccesRaportBnrNou)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.AccesRaportBnrVechi)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.AccesRaportSpecial)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.AccesRaportTransferuriZilnice)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.AccesRaportTranzactiiZilnice)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.AccesTransferuriLunare)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.AccesTranzactiiLunare)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Nume)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Prenume)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.AccesCasaLeiValuta)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.AccesOperatiiTransfer)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.AccesRaportAdaosLunar)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.AccesRaportBnrNou)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.AccesRaportBnrVechi)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.AccesRaportSpecial)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.AccesRaportTransferuriZilnice)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.AccesRaportTranzactiiZilnice)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.AccesTransferuriLunare)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.AccesTranzactiiLunare)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Nume)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Prenume)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

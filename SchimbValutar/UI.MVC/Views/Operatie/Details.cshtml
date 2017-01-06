@@ -1,0 +1,192 @@
+@model Domain_Entities.Operatie
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Operatie</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.AcronimValuta)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.AcronimValuta)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.AdaosRealizat)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.AdaosRealizat)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.AdaosRelativ)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.AdaosRelativ)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.CalitateClient)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.CalitateClient)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.CodTaraClient)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.CodTaraClient)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.CursOficialBnr)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.CursOficialBnr)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.CursValutarStabilit)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.CursValutarStabilit)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.DataOperatiune)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.DataOperatiune)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.DenumireTaraClient)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.DenumireTaraClient)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.InstrumentPlata)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.InstrumentPlata)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Multiplu)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Multiplu)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.NumarCurentChitanta)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.NumarCurentChitanta)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.NumarDocument)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.NumarDocument)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.NumarDocumentIdentitate)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.NumarDocumentIdentitate)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.NumarLista)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.NumarLista)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.NumarRaportZ)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.NumarRaportZ)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.NumePrenumeClient)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.NumePrenumeClient)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.ParitateEuro)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.ParitateEuro)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.ProcentComisionCard)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.ProcentComisionCard)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.ProcentComisionCec)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.ProcentComisionCec)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.SerieChitanta)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.SerieChitanta)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.SerieDocumentIdentitate)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.SerieDocumentIdentitate)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.SoldPrecedent)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.SoldPrecedent)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.StareOperatiuneTranzactie)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.StareOperatiuneTranzactie)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.SumaValuta)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.SumaValuta)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.TipDocumentIdentitate)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.TipDocumentIdentitate)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.ValoareComision)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.ValoareComision)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.ValoareLei)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.ValoareLei)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.ValoareSpeze)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.ValoareSpeze)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.Id">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>

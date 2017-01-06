@@ -1,0 +1,107 @@
+@using Domain_Entities
+@model Domain_Entities.Card
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h2>Edit</h2>
+
+<form asp-action="Edit">
+    <div class="form-horizontal">
+        <h4>Card</h4>
+        <hr />
+        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+    <input type="hidden" asp-for="Id" />
+        <div class="form-group">
+            <label asp-for="ClientId" class="col-md-2 control-label"></label>
+            <div class="col-md-10">
+                <input asp-for="ClientId" class="form-control" />
+                <span asp-validation-for="ClientId" class="text-danger" />
+            </div>
+        </div>
+        <div class="form-group">
+            <label asp-for="CursValutarStabilit" class="col-md-2 control-label"></label>
+            <div class="col-md-10">
+                <input asp-for="CursValutarStabilit" class="form-control" />
+                <span asp-validation-for="CursValutarStabilit" class="text-danger" />
+            </div>
+        </div>
+        <div class="form-group">
+            <label asp-for="DataTranzactie" class="col-md-2 control-label"></label>
+            <div class="col-md-10">
+                <input asp-for="DataTranzactie" class="form-control" />
+                <span asp-validation-for="DataTranzactie" class="text-danger" />
+            </div>
+        </div>
+        <div class="form-group">
+            <label asp-for="DenumireCard" class="col-md-2 control-label"></label>
+            <div class="col-md-10">
+                <input asp-for="DenumireCard" class="form-control" />
+                <span asp-validation-for="DenumireCard" class="text-danger" />
+            </div>
+        </div>
+        <div class="form-group">
+            <label asp-for="NumarBonFiscal" class="col-md-2 control-label"></label>
+            <div class="col-md-10">
+                <input asp-for="NumarBonFiscal" class="form-control" />
+                <span asp-validation-for="NumarBonFiscal" class="text-danger" />
+            </div>
+        </div>
+        <div class="form-group">
+            <label asp-for="NumarCard" class="col-md-2 control-label"></label>
+            <div class="col-md-10">
+                <input asp-for="NumarCard" class="form-control" />
+                <span asp-validation-for="NumarCard" class="text-danger" />
+            </div>
+        </div>
+        <div class="form-group">
+            <label asp-for="NumarChitantaSchimbValutar" class="col-md-2 control-label"></label>
+            <div class="col-md-10">
+                <input asp-for="NumarChitantaSchimbValutar" class="form-control" />
+                <span asp-validation-for="NumarChitantaSchimbValutar" class="text-danger" />
+            </div>
+        </div>
+        <div class="form-group">
+            <label asp-for="SerieChitantaSchimbValutar" class="col-md-2 control-label"></label>
+            <div class="col-md-10">
+                <input asp-for="SerieChitantaSchimbValutar" class="form-control" />
+                <span asp-validation-for="SerieChitantaSchimbValutar" class="text-danger" />
+            </div>
+        </div>
+        <div class="form-group">
+            <label asp-for="SumaTranzactionata" class="col-md-2 control-label"></label>
+            <div class="col-md-10">
+                <input asp-for="SumaTranzactionata" class="form-control" />
+                <span asp-validation-for="SumaTranzactionata" class="text-danger" />
+            </div>
+        </div>
+        <div class="form-group">
+            <label asp-for="ValoareLei" class="col-md-2 control-label"></label>
+            <div class="col-md-10">
+                <input asp-for="ValoareLei" class="form-control" />
+                <span asp-validation-for="ValoareLei" class="text-danger" />
+            </div>
+        </div>
+        <div class="form-group">
+            <label asp-for="Valuta" class="col-md-2 control-label"></label>
+            <div class="col-md-10">
+                <input asp-for="Valuta" class="form-control" />
+                <span asp-validation-for="Valuta" class="text-danger" />
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="Save" class="btn btn-default" />
+            </div>
+        </div>
+    </div>
+</form>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
