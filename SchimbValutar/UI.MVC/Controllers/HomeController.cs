@@ -9,6 +9,20 @@ namespace UI.MVC.Controllers
             return View();
         }
 
+        public IActionResult Owner()
+        {
+            return View();
+        }
+        public IActionResult Client()
+        {
+            return View();
+        }
+
+        public IActionResult Employee()
+        {
+            return View();
+        }
+
         public IActionResult About()
         {
             ViewData["Message"] = "Your application description page.";

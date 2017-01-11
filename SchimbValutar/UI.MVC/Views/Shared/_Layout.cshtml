@@ -34,16 +34,15 @@
             </div>
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
-                    <li><a asp-area="" asp-controller="Home" asp-action="Index">Home</a></li>
-                    <li><a asp-area="" asp-controller="Home" asp-action="About">About</a></li>
-                    <li><a asp-area="" asp-controller="Home" asp-action="Contact">Contact</a></li>
-                    <li><a asp-area="" asp-controller="Card" asp-action="Index">Carduri</a></li>
-                    <li><a asp-area="" asp-controller="Casier" asp-action="Index">Casieri</a></li>
-                    <li><a asp-area="" asp-controller="Client" asp-action="Index">Clienti</a></li>
-                    <li><a asp-area="" asp-controller="Curs" asp-action="Index">Cursuri</a></li>
-                    <li><a asp-area="" asp-controller="Operatie" asp-action="Index">Operatii</a></li>
-                    <li><a asp-area="" asp-controller="Tara" asp-action="Index">Tari</a></li>
-                    <li><a asp-area="" asp-controller="Valuta" asp-action="Index">Valute</a></li>
+                    <li>
+                        <a asp-area="" asp-controller="Home" asp-action="Owner">Owner</a>
+                    </li>
+                    <li>
+                        <a asp-area="" asp-controller="Home" asp-action="Client">Client</a>
+                    </li>
+                    <li>
+                        <a asp-area="" asp-controller="Home" asp-action="Employee">Employee</a>
+                    </li>
                 </ul>
                 @await Html.PartialAsync("_LoginPartial")
             </div>
