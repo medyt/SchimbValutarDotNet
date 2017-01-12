@@ -1,6 +1,138 @@
 ﻿@{
     ViewData["Title"] = "Client";
 }
-<h2>@ViewData["Title"]</h2>
 
-<p>Use this area to provide additional information about client.</p>
+<div id="myCarousel" class="carousel slide" data-ride="carousel" data-interval="6000">
+    <ol class="carousel-indicators">
+        <li data-target="#myCarousel" data-slide-to="0"></li>
+        <li data-target="#myCarousel" data-slide-to="1"></li>
+        <li data-target="#myCarousel" data-slide-to="2" class="active"></li>
+    </ol>
+    <div class="carousel-inner" role="listbox">
+        <div class="item">
+            <img src="~/images/carousel1.jpg" alt="ASP.NET" class="img-responsive" />
+            <div class="carousel-caption" role="option">
+                <a class="btn btn-default" href="#">
+                    Learn more
+                </a>
+                <p>
+                    Learn how to build ASP.NET apps that can run anywhere.
+
+                </p>
+            </div>
+        </div>
+        <div class="item">
+            <img src="~/images/carousel2.jpg" alt="Visual Studio" class="img-responsive" />
+            <div class="carousel-caption" role="option">
+                <a class="btn btn-default" href="#">
+                    Learn More
+                </a>
+                <p>
+                    There are powerful new features in Visual Studio for building modern web apps.
+
+                </p>
+            </div>
+        </div>
+        <div class="item active">
+            <img src="~/images/carousel3.jpeg" alt="Package Management" class="img-responsive" />
+            <div class="carousel-caption" role="option">
+                <a class="btn btn-default" href="#">
+                    Sign up now
+                </a>
+                <p>
+                    Bring in libraries from NuGet, Bower, and npm, and automate tasks using Grunt or Gulp.
+                </p>
+            </div>
+        </div>
+    </div>
+    <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+        <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+    </a>
+    <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+        <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+    </a>
+</div>
+<section class="first-section">
+    <div class="container">
+        <div class="col-md-12">
+            <ul class="exchange-rate-bar">
+                <li class="exchange-rate-title">EXCHANGE RATE</li>
+                <li>RON/USD 4.0134</li>
+                <li>RON/EUR 4.5413</li>
+                <li>RON/GBP 5.3588</li>
+                <li>RON/CAD 4.0981</li>
+            </ul>
+        </div>
+    </div>
+</section>
+<section>
+    <div class="container">
+        <div class="col-md-12">
+            <h5><span>Cash</span> <br />desk overview</h5>
+            <p>See how much money was produced per cash desk</p>
+        </div>
+        <div class="col-md-12">
+            <form>
+                <div class="form-group">
+                    <button type="submit" class="btn btn-default">See overview</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</section>
+<section class="alternate-section">
+    <div class="container">
+        <div class="col-md-12">
+            <h5><span>Day</span> <br />overview</h5>
+            <p>See the amount of money produced per day by all cash desks you have</p>
+        </div>
+        <div class="col-md-12">
+            <form>
+                <div class="form-group">
+                    <button type="submit" class="btn btn-default">See overview</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</section>
+<section>
+    <div class="container">
+        <div class="col-md-12">
+            <h5><span>Establish</span> <br />exchange rate</h5>
+            <p>At the start of the day you can establish the buying and selling exchange rates for your cash desks.</p>
+        </div>
+        <div class="col-md-12">
+            <form>
+                <p>Selling rates:</p>
+                <div class="form-group">
+                    <label for="eurotoron">One euro to ron</label>
+                    <input type="number" class="form-control" id="eurotoron">
+                </div>
+                <div class="form-group">
+                    <label for="usdtoron">One usd to ron</label>
+                    <input type="number" class="form-control" id="usdtoron">
+                </div>
+                <div class="form-group">
+                    <label for="gbptoron">One gbp to ron</label>
+                    <input type="number" class="form-control" id="gbptoron">
+                </div>
+                <p>Buying rates:</p>
+                <div class="form-group">
+                    <label for="eurotoron">One euro to ron</label>
+                    <input type="number" class="form-control" id="eurotoron">
+                </div>
+                <div class="form-group">
+                    <label for="usdtoron">One usd to ron</label>
+                    <input type="number" class="form-control" id="usdtoron">
+                </div>
+                <div class="form-group">
+                    <label for="gbptoron">One gbp to ron</label>
+                    <input type="number" class="form-control" id="gbptoron">
+                </div>
+                <button type="submit" class="btn btn-default">Submit</button>
+            </form>
+        </div>
+    </div>
+</section>

@@ -1,6 +1,61 @@
 ﻿@{
     ViewData["Title"] = "Employee";
 }
-<h2>@ViewData["Title"]</h2>
-
-<p>Use this area to provide additional information about employee.</p>
+<section>
+    <div class="container">
+        <div class="col-md-12">
+            <h5><span>Register</span> <br />transaction</h5>
+            <p>Fill in the fields and submit transaction</p>
+        </div>
+        <div class="col-md-12">
+            <form>
+                <div class="form-group">
+                    <label for="from">From:</label>
+                    <select class="form-control" id="from">
+                        <option>Choose a currency</option>
+                        <option>USD</option>
+                        <option>EUR</option>
+                        <option>GBP</option>
+                        <option>RON</option>
+                        <option>IDK</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="fromValue">Amount:</label>
+                    <input type="text" class="form-control" id="fromValue">
+                </div>
+                <div class="form-group">
+                    <label for="to">To:</label>
+                    <select class="form-control" id="to">
+                        <option>Choose a currency</option>
+                        <option>USD</option>
+                        <option>EUR</option>
+                        <option>GBP</option>
+                        <option>RON</option>
+                        <option>IDK</option>
+                    </select>
+                </div>
+                @*<div class="form-group">
+                    <label for="toValue">Amount:</label>
+                    <input type="text" class="form-control" id="toValue">
+                </div>*@
+                <button type="submit" class="btn btn-default">Submit</button>
+            </form>
+        </div>
+    </div>
+</section>
+<section class="alternate-section">
+    <div class="container">
+        <div class="col-md-12">
+            <h5><span>Receipt</span> <br />print</h5>
+            <p>Click the following button to generate a receipt for the full day of work</p>
+        </div>
+        <div class="col-md-12">
+            <form>
+                <div class="form-group">
+                    <button type="submit" class="btn btn-default">Print receipt</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</section>
