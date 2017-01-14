@@ -126,23 +126,58 @@ namespace UI.MVC.Controllers
             ViewData["ReturnUrl"] = returnUrl;
             if (ModelState.IsValid)
             {
-                var user = new ApplicationUser { UserName = model.Email, Email = model.Email };
-                var result = await _userManager.CreateAsync(user, model.Password);
-                if (result.Succeeded)
+                var testok=_context.Casier.SingleOrDefault(m => String.Equals(m.Email, model.Email));
+                if (testok == null)
                 {
-                    // For more information on how to enable account confirmation and password reset please visit http://go.microsoft.com/fwlink/?LinkID=532713
-                    // Send an email with this link
-                    //var code = await _userManager.GenerateEmailConfirmationTokenAsync(user);
-                    //var callbackUrl = Url.Action("ConfirmEmail", "Account", new { userId = user.Id, code = code }, protocol: HttpContext.Request.Scheme);
-                    //await _emailSender.SendEmailAsync(model.Email, "Confirm your account",
-                    //    $"Please confirm your account by clicking this link: <a href='{callbackUrl}'>link</a>");
-                    await _signInManager.SignInAsync(user, isPersistent: false);
-                    _logger.LogInformation(3, "User created a new account with password.");
-                    return RedirectToLocal(returnUrl);
-                }
-                AddErrors(result);
-            }
+                    var casier = new Casier
+                    {
+                        Id = Guid.NewGuid(),
+                        Prenume = model.Name,
+                        Nume = model.LastName,
+                        Email = model.Email,
+                        Password = model.Password,
+                        CNP = model.CNP
+                    };
+                    if (model.Type.Equals("Employee"))
+                    {
+                        casier.AccesEmployee = true;
+                        casier.AccesManager = false;
+                        casier.AccesOwner = false;
+                    }
+                    if (model.Type.Equals("Manager"))
+                    {
+                        casier.AccesEmployee = false;
+                        casier.AccesManager = true;
+                        casier.AccesOwner = false;
+                    }
+                    if (model.Type.Equals("Owner"))
+                    {
+                        casier.AccesEmployee = false;
+                        casier.AccesManager = false;
+                        casier.AccesOwner = true;
+                    }
+                    _context.Add(casier);
+                    _context.SaveChanges();
+                    var test = _context.Casier.SingleOrDefault(m => String.Equals(m.Email, model.Email));
 
+                    if (test != null && test.Password == model.Password)
+                    {
+                        // For more information on how to enable account confirmation and password reset please visit http://go.microsoft.com/fwlink/?LinkID=532713
+                        // Send an email with this link
+                        //var code = await _userManager.GenerateEmailConfirmationTokenAsync(user);
+                        //var callbackUrl = Url.Action("ConfirmEmail", "Account", new { userId = user.Id, code = code }, protocol: HttpContext.Request.Scheme);
+                        //await _emailSender.SendEmailAsync(model.Email, "Confirm your account",
+                        //    $"Please confirm your account by clicking this link: <a href='{callbackUrl}'>link</a>")
+                        _logger.LogInformation(3, "User created a new account with password.");
+                        return RedirectToLocal(returnUrl);
+                    }
+                }
+                else
+                {
+                    ModelState.AddModelError(string.Empty, "This email allready in use !");
+                    return View(model);
+                }
+            }
             // If we got this far, something failed, redisplay form
             return View(model);
         }
