@@ -70,7 +70,7 @@ namespace UI.MVC.Controllers
                     _logger.LogInformation(1, "User logged in.");
                     if (casier.AccesOwner)
                     {
-                        Response.Redirect("http://localhost:1927/Home/Owner",false);
+                        Response.Redirect("http://localhost:1927/Home/Owner", false);
                     }
                     else
                     {
@@ -86,7 +86,6 @@ namespace UI.MVC.Controllers
                             }
                         }
                     }
-                    return RedirectToLocal(returnUrl);
                 }
                 else
                 {
