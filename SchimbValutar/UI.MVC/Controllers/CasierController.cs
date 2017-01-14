@@ -24,7 +24,7 @@ namespace UI.MVC.Controllers
         }
 
         // GET: Casier/Details/5
-        public async Task<IActionResult> Details(string id)
+        public async Task<IActionResult> Details(Guid id)
         {
             if (id == null)
             {
@@ -55,7 +55,7 @@ namespace UI.MVC.Controllers
         {
             if (ModelState.IsValid)
             {
-                casier.Id = Guid.NewGuid().ToString();
+                casier.Id = Guid.NewGuid();
                 _context.Add(casier);
                 await _context.SaveChangesAsync();
                 return RedirectToAction("Index");
@@ -64,7 +64,7 @@ namespace UI.MVC.Controllers
         }
 
         // GET: Casier/Edit/5
-        public async Task<IActionResult> Edit(string id)
+        public async Task<IActionResult> Edit(Guid id)
         {
             if (id == null)
             {
@@ -84,7 +84,7 @@ namespace UI.MVC.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(string id, [Bind("Id,AccesCasaLeiValuta,AccesOperatiiTransfer,AccesRaportAdaosLunar,AccesRaportBnrNou,AccesRaportBnrVechi,AccesRaportSpecial,AccesRaportTransferuriZilnice,AccesRaportTranzactiiZilnice,AccesTransferuriLunare,AccesTranzactiiLunare,Nume,Prenume")] Casier casier)
+        public async Task<IActionResult> Edit(Guid id, [Bind("Id,AccesCasaLeiValuta,AccesOperatiiTransfer,AccesRaportAdaosLunar,AccesRaportBnrNou,AccesRaportBnrVechi,AccesRaportSpecial,AccesRaportTransferuriZilnice,AccesRaportTranzactiiZilnice,AccesTransferuriLunare,AccesTranzactiiLunare,Nume,Prenume")] Casier casier)
         {
             if (id != casier.Id)
             {
@@ -115,7 +115,7 @@ namespace UI.MVC.Controllers
         }
 
         // GET: Casier/Delete/5
-        public async Task<IActionResult> Delete(string id)
+        public async Task<IActionResult> Delete(Guid id)
         {
             if (id == null)
             {
@@ -134,7 +134,7 @@ namespace UI.MVC.Controllers
         // POST: Casier/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> DeleteConfirmed(string id)
+        public async Task<IActionResult> DeleteConfirmed(Guid id)
         {
             var casier = await _context.Casier.SingleOrDefaultAsync(m => m.Id == id);
             _context.Casier.Remove(casier);
@@ -142,7 +142,7 @@ namespace UI.MVC.Controllers
             return RedirectToAction("Index");
         }
 
-        private bool CasierExists(string id)
+        private bool CasierExists(Guid id)
         {
             return _context.Casier.Any(e => e.Id == id);
         }

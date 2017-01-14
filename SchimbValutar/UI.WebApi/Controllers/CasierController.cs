@@ -3,6 +3,7 @@ using System.Threading.Tasks;
 using Domain_Entities;
 using Domain_Interfaces;
 using Microsoft.AspNetCore.Mvc;
+using System;
 
 // For more information on enabling Web API for empty projects, visit http://go.microsoft.com/fwlink/?LinkID=397860
 
@@ -32,12 +33,12 @@ namespace UI.WebApi.Controllers
 
         // GET api/Casier/5
         [HttpGet("{id}")]
-        public Task<Casier> Get(string id)
+        public Task<Casier> Get(Guid id)
         {
             return GetCasierByIdInternal(id);
         }
 
-        private async Task<Casier> GetCasierByIdInternal(string id)
+        private async Task<Casier> GetCasierByIdInternal(Guid id)
         {
             return await _casierRepository.Get(id);
         }
@@ -51,14 +52,14 @@ namespace UI.WebApi.Controllers
 
         // PUT api/Casier/5
         [HttpPut("{id}")]
-        public void Put(string id, [FromBody]Casier casier)
+        public void Put(Guid id, [FromBody]Casier casier)
         {
             _casierRepository.Update(id, casier);
         }
 
         // DELETE api/Casier/5
         [HttpDelete("{id}")]
-        public void Delete(string id)
+        public void Delete(Guid id)
         {
             _casierRepository.Remove(id);
         }

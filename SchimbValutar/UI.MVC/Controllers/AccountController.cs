@@ -9,6 +9,8 @@ using Microsoft.Extensions.Logging;
 using Domain_Entities;
 using Domain_Entities.AccountViewModels;
 using UI.MVC.Services;
+using UI.MVC.Data;
+using System;
 
 namespace UI.MVC.Controllers
 {
@@ -20,19 +22,22 @@ namespace UI.MVC.Controllers
         private readonly IEmailSender _emailSender;
         private readonly ISmsSender _smsSender;
         private readonly ILogger _logger;
+        private readonly ApplicationDbContext _context;
 
         public AccountController(
             UserManager<ApplicationUser> userManager,
             SignInManager<ApplicationUser> signInManager,
             IEmailSender emailSender,
             ISmsSender smsSender,
-            ILoggerFactory loggerFactory)
+            ILoggerFactory loggerFactory,
+            ApplicationDbContext context)
         {
             _userManager = userManager;
             _signInManager = signInManager;
             _emailSender = emailSender;
             _smsSender = smsSender;
             _logger = loggerFactory.CreateLogger<AccountController>();
+            _context = context;
         }
 
         //
@@ -57,25 +62,44 @@ namespace UI.MVC.Controllers
             {
                 // This doesn't count login failures towards account lockout
                 // To enable password failures to trigger account lockout, set lockoutOnFailure: true
-                var result = await _signInManager.PasswordSignInAsync(model.Email, model.Password, model.RememberMe, lockoutOnFailure: false);
-                if (result.Succeeded)
+                
+                var casier = _context.Casier.SingleOrDefault(m => String.Equals(m.Email, model.Email));
+
+                if (casier != null && casier.Password == model.Password)
                 {
                     _logger.LogInformation(1, "User logged in.");
+                    if (casier.AccesOwner)
+                    {
+                        Response.Redirect("http://localhost:1927/Home/Owner",false);
+                    }
+                    else
+                    {
+                        if (casier.AccesManager)
+                        {
+                            Response.Redirect("http://localhost:1927/Home/Client", false);
+                        }
+                        else
+                        {
+                            if (casier.AccesEmployee)
+                            {
+                                Response.Redirect("http://localhost:1927/Home/Employee", false);
+                            }
+                        }
+                    }
                     return RedirectToLocal(returnUrl);
-                }
-                if (result.RequiresTwoFactor)
-                {
-                    return RedirectToAction(nameof(SendCode), new { ReturnUrl = returnUrl, RememberMe = model.RememberMe });
-                }
-                if (result.IsLockedOut)
-                {
-                    _logger.LogWarning(2, "User account locked out.");
-                    return View("Lockout");
                 }
                 else
                 {
-                    ModelState.AddModelError(string.Empty, "Invalid login attempt.");
-                    return View(model);
+                    if (casier.Password != model.Password)
+                    {
+                        ModelState.AddModelError(string.Empty, "Wrong password");
+                        return View(model);
+                    }
+                    else
+                    {
+                        ModelState.AddModelError(string.Empty, "Invalid login attempt.");
+                        return View(model);
+                    }
                 }
             }
 

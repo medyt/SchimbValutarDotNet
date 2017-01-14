@@ -6,6 +6,7 @@ using Domain_Interfaces;
 using Infrastructure.Contexts;
 using Microsoft.Extensions.Options;
 using MongoDB.Driver;
+using System;
 
 namespace Infrastructure.Data
 {
@@ -23,7 +24,7 @@ namespace Infrastructure.Data
             return await _context.Casieri.Find(_ => true).ToListAsync();
         }
 
-        public async Task<Casier> Get(string id)
+        public async Task<Casier> Get(Guid id)
         {
             var filter = Builders<Casier>.Filter.Eq("Id", id);
 
@@ -37,13 +38,13 @@ namespace Infrastructure.Data
             await _context.Casieri.InsertOneAsync(item);
         }
 
-        public async Task<DeleteResult> Remove(string id)
+        public async Task<DeleteResult> Remove(Guid id)
         {
             return await _context.Casieri.DeleteOneAsync(
                 Builders<Casier>.Filter.Eq("Id", id));
         }
 
-        public async Task<UpdateResult> Update(string id, Casier casier)
+        public async Task<UpdateResult> Update(Guid id, Casier casier)
         {
             var filter = Builders<Casier>.Filter.Eq(s => s.Id, id);
             var update = Builders<Casier>.Update
