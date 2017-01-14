@@ -1,25 +1,2 @@
-#:C:\Users\Alex\Desktop\SchimbValutarDotNet\SchimbValutar\Domain Entities\Domain Entities.xproj
-#:C:\Users\Alex\Desktop\SchimbValutarDotNet\SchimbValutar\Domain Interfaces\Domain Interfaces.xproj
-C:\Users\Alex\Desktop\SchimbValutarDotNet\SchimbValutar\Domain Interfaces\Domain Interfaces.xproj|C:\Users\Alex\Desktop\SchimbValutarDotNet\SchimbValutar\Domain Entities\Domain Entities.xproj
-#:C:\Users\Alex\Desktop\SchimbValutarDotNet\SchimbValutar\Infrastructure.Data\Infrastructure.Data.xproj
-C:\Users\Alex\Desktop\SchimbValutarDotNet\SchimbValutar\Infrastructure.Data\Infrastructure.Data.xproj|C:\Users\Alex\Desktop\SchimbValutarDotNet\SchimbValutar\DatabaseSettings\DatabaseSettings.xproj
-C:\Users\Alex\Desktop\SchimbValutarDotNet\SchimbValutar\Infrastructure.Data\Infrastructure.Data.xproj|C:\Users\Alex\Desktop\SchimbValutarDotNet\SchimbValutar\Domain Entities\Domain Entities.xproj
-C:\Users\Alex\Desktop\SchimbValutarDotNet\SchimbValutar\Infrastructure.Data\Infrastructure.Data.xproj|C:\Users\Alex\Desktop\SchimbValutarDotNet\SchimbValutar\Domain Interfaces\Domain Interfaces.xproj
-C:\Users\Alex\Desktop\SchimbValutarDotNet\SchimbValutar\Infrastructure.Data\Infrastructure.Data.xproj|C:\Users\Alex\Desktop\SchimbValutarDotNet\SchimbValutar\Infrastructure.Contexts\Infrastructure.Contexts.xproj
-C:\Users\Alex\Desktop\SchimbValutarDotNet\SchimbValutar\Domain Interfaces\Domain Interfaces.xproj|C:\Users\Alex\Desktop\SchimbValutarDotNet\SchimbValutar\Domain Entities\Domain Entities.xproj
-C:\Users\Alex\Desktop\SchimbValutarDotNet\SchimbValutar\Infrastructure.Contexts\Infrastructure.Contexts.xproj|C:\Users\Alex\Desktop\SchimbValutarDotNet\SchimbValutar\DatabaseSettings\DatabaseSettings.xproj
-C:\Users\Alex\Desktop\SchimbValutarDotNet\SchimbValutar\Infrastructure.Contexts\Infrastructure.Contexts.xproj|C:\Users\Alex\Desktop\SchimbValutarDotNet\SchimbValutar\Domain Entities\Domain Entities.xproj
-#:C:\Users\Alex\Desktop\SchimbValutarDotNet\SchimbValutar\Infrastructure.Contexts\Infrastructure.Contexts.xproj
-C:\Users\Alex\Desktop\SchimbValutarDotNet\SchimbValutar\Infrastructure.Contexts\Infrastructure.Contexts.xproj|C:\Users\Alex\Desktop\SchimbValutarDotNet\SchimbValutar\DatabaseSettings\DatabaseSettings.xproj
-C:\Users\Alex\Desktop\SchimbValutarDotNet\SchimbValutar\Infrastructure.Contexts\Infrastructure.Contexts.xproj|C:\Users\Alex\Desktop\SchimbValutarDotNet\SchimbValutar\Domain Entities\Domain Entities.xproj
-#:C:\Users\Alex\Desktop\SchimbValutarDotNet\SchimbValutar\UI.WebApi\UI.WebApi.xproj
-C:\Users\Alex\Desktop\SchimbValutarDotNet\SchimbValutar\UI.WebApi\UI.WebApi.xproj|C:\Users\Alex\Desktop\SchimbValutarDotNet\SchimbValutar\Infrastructure.Data\Infrastructure.Data.xproj
-C:\Users\Alex\Desktop\SchimbValutarDotNet\SchimbValutar\Infrastructure.Data\Infrastructure.Data.xproj|C:\Users\Alex\Desktop\SchimbValutarDotNet\SchimbValutar\DatabaseSettings\DatabaseSettings.xproj
-C:\Users\Alex\Desktop\SchimbValutarDotNet\SchimbValutar\Infrastructure.Data\Infrastructure.Data.xproj|C:\Users\Alex\Desktop\SchimbValutarDotNet\SchimbValutar\Domain Entities\Domain Entities.xproj
-C:\Users\Alex\Desktop\SchimbValutarDotNet\SchimbValutar\Infrastructure.Data\Infrastructure.Data.xproj|C:\Users\Alex\Desktop\SchimbValutarDotNet\SchimbValutar\Domain Interfaces\Domain Interfaces.xproj
-C:\Users\Alex\Desktop\SchimbValutarDotNet\SchimbValutar\Infrastructure.Data\Infrastructure.Data.xproj|C:\Users\Alex\Desktop\SchimbValutarDotNet\SchimbValutar\Infrastructure.Contexts\Infrastructure.Contexts.xproj
-C:\Users\Alex\Desktop\SchimbValutarDotNet\SchimbValutar\Domain Interfaces\Domain Interfaces.xproj|C:\Users\Alex\Desktop\SchimbValutarDotNet\SchimbValutar\Domain Entities\Domain Entities.xproj
-C:\Users\Alex\Desktop\SchimbValutarDotNet\SchimbValutar\Infrastructure.Contexts\Infrastructure.Contexts.xproj|C:\Users\Alex\Desktop\SchimbValutarDotNet\SchimbValutar\DatabaseSettings\DatabaseSettings.xproj
-C:\Users\Alex\Desktop\SchimbValutarDotNet\SchimbValutar\Infrastructure.Contexts\Infrastructure.Contexts.xproj|C:\Users\Alex\Desktop\SchimbValutarDotNet\SchimbValutar\Domain Entities\Domain Entities.xproj
-#:C:\Users\Alex\Desktop\SchimbValutarDotNet\SchimbValutar\UI.MVC\UI.MVC.xproj
-C:\Users\Alex\Desktop\SchimbValutarDotNet\SchimbValutar\UI.MVC\UI.MVC.xproj|C:\Users\Alex\Desktop\SchimbValutarDotNet\SchimbValutar\Domain Entities\Domain Entities.xproj
+#:C:\Users\Teodor\Documents\GitHub\SchimbValutarDotNet\SchimbValutar\UI.MVC\UI.MVC.xproj
+C:\Users\Teodor\Documents\GitHub\SchimbValutarDotNet\SchimbValutar\UI.MVC\UI.MVC.xproj|C:\Users\Teodor\Documents\GitHub\SchimbValutarDotNet\SchimbValutar\Domain Entities\Domain Entities.xproj

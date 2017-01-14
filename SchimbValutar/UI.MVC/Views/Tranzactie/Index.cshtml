@@ -1,0 +1,108 @@
+@model UI.MVC.Models.Tranzactie
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h2>Index</h2>
+
+<form asp-action="Index" method="post">
+    <div class="form-horizontal">
+        <h4>Tranzactie</h4>
+        <hr />
+        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+        <div class="form-group">
+            <label asp-for="TipOperatie" class="col-md-2 control-label"></label>
+            <div class="col-md-10">
+                <select asp-for="TipOperatie" class="form-control">
+                    <option>Cumparare</option>
+                    <option>Vanzare</option>
+                </select>
+                <span asp-validation-for="TipOperatie" class="text-danger" />
+            </div>
+        </div>
+        <div class="form-group">
+            <label asp-for="ActIdentitate" class="col-md-2 control-label"></label>
+            <div class="col-md-10">
+                <select asp-for="ActIdentitate" class="form-control">
+                    <option>CarteDeIdentitate</option>
+                    <option>Pasaport</option>
+                    <option>PermisDeConducere</option>
+                </select>
+                <span asp-validation-for="ActIdentitate" class="text-danger" />
+            </div>
+        </div>
+        <div class="form-group">
+            <label asp-for="Seria" class="col-md-2 control-label"></label>
+            <div class="col-md-10">
+                <input asp-for="Seria" class="form-control" />
+                <span asp-validation-for="Seria" class="text-danger" />
+            </div>
+        </div>
+        <div class="form-group">
+            <label asp-for="Numarul" class="col-md-2 control-label"></label>
+            <div class="col-md-10">
+                <input asp-for="Numarul" class="form-control" />
+                <span asp-validation-for="Numarul" class="text-danger" />
+            </div>
+        </div>
+        <div class="form-group">
+            <label asp-for="Cnp" class="col-md-2 control-label"></label>
+            <div class="col-md-10">
+                <input asp-for="Cnp" class="form-control" />
+                <span asp-validation-for="Cnp" class="text-danger" />
+            </div>
+        </div>
+        <div class="form-group">
+            <label asp-for="Din" class="col-md-2 control-label"></label>
+            <div class="col-md-10">
+                <select asp-for="Din" class="form-control">
+                    <option>RON</option>
+                    <option>USD</option>
+                    <option>EUR</option>
+                    <option>GBP</option>
+                </select>
+                <span asp-validation-for="Din" class="text-danger" />
+            </div>
+        </div>
+        <div class="form-group">
+            <label asp-for="In" class="col-md-2 control-label"></label>
+            <div class="col-md-10">
+                <select asp-for="In" class="form-control">
+                    <option>RON</option>
+                    <option>USD</option>
+                    <option>EUR</option>
+                    <option>GBP</option>
+                </select>
+                <span asp-validation-for="In" class="text-danger" />
+            </div>
+        </div>
+        <div class="form-group">
+            <label asp-for="SumaTranzationata" class="col-md-2 control-label"></label>
+            <div class="col-md-10">
+                <input asp-for="SumaTranzationata" class="form-control" />
+                <span asp-validation-for="SumaTranzationata" class="text-danger" />
+            </div>
+        </div>
+        <div class="form-group">
+            <label asp-for="SumaDatorata" class="col-md-2 control-label"></label>
+            <div class="col-md-10">
+                <input asp-for="SumaDatorata" class="form-control" />
+                <span asp-validation-for="SumaDatorata" class="text-danger" />
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="Create" class="btn btn-default" />
+            </div>
+        </div>
+    </div>
+</form>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

@@ -402,6 +402,39 @@ namespace UI.MVC.Migrations
                     b.ToTable("AspNetUserTokens");
                 });
 
+            modelBuilder.Entity("UI.MVC.Models.Tranzactie", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd();
+
+                    b.Property<int>("ActIdentitate");
+
+                    b.Property<string>("Cnp")
+                        .IsRequired();
+
+                    b.Property<int>("Din");
+
+                    b.Property<int>("In");
+
+                    b.Property<bool>("IsDeleted");
+
+                    b.Property<string>("Numarul")
+                        .IsRequired();
+
+                    b.Property<string>("Seria")
+                        .IsRequired();
+
+                    b.Property<decimal>("SumaDatorata");
+
+                    b.Property<decimal>("SumaTranzationata");
+
+                    b.Property<int>("TipOperatie");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Tranzatii");
+                });
+
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.EntityFrameworkCore.IdentityRoleClaim<string>", b =>
                 {
                     b.HasOne("Microsoft.AspNetCore.Identity.EntityFrameworkCore.IdentityRole")

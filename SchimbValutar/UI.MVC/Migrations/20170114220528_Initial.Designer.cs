@@ -8,7 +8,7 @@ using UI.MVC.Data;
 namespace UI.MVC.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20170114152319_Initial")]
+    [Migration("20170114220528_Initial")]
     partial class Initial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -401,6 +401,39 @@ namespace UI.MVC.Migrations
                     b.HasKey("UserId", "LoginProvider", "Name");
 
                     b.ToTable("AspNetUserTokens");
+                });
+
+            modelBuilder.Entity("UI.MVC.Models.Tranzactie", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd();
+
+                    b.Property<int>("ActIdentitate");
+
+                    b.Property<string>("Cnp")
+                        .IsRequired();
+
+                    b.Property<int>("Din");
+
+                    b.Property<int>("In");
+
+                    b.Property<bool>("IsDeleted");
+
+                    b.Property<string>("Numarul")
+                        .IsRequired();
+
+                    b.Property<string>("Seria")
+                        .IsRequired();
+
+                    b.Property<decimal>("SumaDatorata");
+
+                    b.Property<decimal>("SumaTranzationata");
+
+                    b.Property<int>("TipOperatie");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Tranzatii");
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.EntityFrameworkCore.IdentityRoleClaim<string>", b =>

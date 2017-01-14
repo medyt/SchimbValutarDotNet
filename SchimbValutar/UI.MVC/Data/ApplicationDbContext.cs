@@ -1,6 +1,7 @@
 ﻿using Domain_Entities;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
+using UI.MVC.Models;
 
 namespace UI.MVC.Data
 {
@@ -32,5 +33,7 @@ namespace UI.MVC.Data
         public DbSet<Tara> Tara { get; set; }
 
         public DbSet<Valuta> Valuta { get; set; }
+
+        public DbSet<Tranzactie> Tranzatii { get; set; }
     }
 }

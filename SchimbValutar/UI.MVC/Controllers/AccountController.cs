@@ -55,14 +55,14 @@ namespace UI.MVC.Controllers
         [HttpPost]
         [AllowAnonymous]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Login(LoginViewModel model, string returnUrl = null)
+        public IActionResult Login(LoginViewModel model, string returnUrl = null)
         {
             ViewData["ReturnUrl"] = returnUrl;
             if (ModelState.IsValid)
             {
                 // This doesn't count login failures towards account lockout
                 // To enable password failures to trigger account lockout, set lockoutOnFailure: true
-                
+
                 var casier = _context.Casier.SingleOrDefault(m => String.Equals(m.Email, model.Email));
 
                 if (casier != null && casier.Password == model.Password)
@@ -82,7 +82,7 @@ namespace UI.MVC.Controllers
                         {
                             if (casier.AccesEmployee)
                             {
-                                Response.Redirect("http://localhost:1927/Home/Employee", false);
+                                Response.Redirect("http://localhost:1927/Tranzactie", false);
                             }
                         }
                     }

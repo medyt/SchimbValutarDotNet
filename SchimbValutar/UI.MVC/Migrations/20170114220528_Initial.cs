@@ -223,6 +223,27 @@ namespace UI.MVC.Migrations
                 });
 
             migrationBuilder.CreateTable(
+                name: "Tranzatii",
+                columns: table => new
+                {
+                    Id = table.Column<Guid>(nullable: false),
+                    ActIdentitate = table.Column<int>(nullable: false),
+                    Cnp = table.Column<string>(nullable: false),
+                    Din = table.Column<int>(nullable: false),
+                    In = table.Column<int>(nullable: false),
+                    IsDeleted = table.Column<bool>(nullable: false),
+                    Numarul = table.Column<string>(nullable: false),
+                    Seria = table.Column<string>(nullable: false),
+                    SumaDatorata = table.Column<decimal>(nullable: false),
+                    SumaTranzationata = table.Column<decimal>(nullable: false),
+                    TipOperatie = table.Column<int>(nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Tranzatii", x => x.Id);
+                });
+
+            migrationBuilder.CreateTable(
                 name: "AspNetUserClaims",
                 columns: table => new
                 {
@@ -387,6 +408,9 @@ namespace UI.MVC.Migrations
 
             migrationBuilder.DropTable(
                 name: "AspNetUserTokens");
+
+            migrationBuilder.DropTable(
+                name: "Tranzatii");
 
             migrationBuilder.DropTable(
                 name: "AspNetRoles");
