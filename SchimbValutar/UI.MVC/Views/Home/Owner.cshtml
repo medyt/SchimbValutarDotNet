@@ -13,23 +13,33 @@
                 <div class="form-group">
                     <label for="selectClient">Client:</label>
                     <select class="form-control" id="selectClient">
-                        <option>Choose a client</option>
-                        <option>Client1</option>
-                        <option>Client2</option>
-                        <option>Client3</option>
-                        <option>Client4</option>
-                        <option>Client5</option>
+                        <option>Choose a type of count</option>
+                        <option>Owner</option>
+                        <option>Manager</option>
+                        <option>Employee</option>
                     </select>
                 </div>
                 <div class="form-group">
-                    <label for="name">User name:</label>
+                    <label for="name">First name:</label>
                     <input type="text" class="form-control" id="name">
+                </div>
+                <div class="form-group">
+                    <label for="name">Last name:</label>
+                    <input type="text" class="form-control" id="lname">
+                </div>
+                <div class="form-group">
+                    <label for="name">CNP:</label>
+                    <input type="text" class="form-control" id="cnp">
+                </div>
+                <div class="form-group">
+                    <label for="name">Email:</label>
+                    <input type="text" class="form-control" id="email">
                 </div>
                 <div class="form-group">
                     <label for="pwd">Password:</label>
                     <input type="password" class="form-control" id="pwd">
                 </div>
-                <button type="submit" class="btn btn-default">Register</button>
+                <button type="submit" class="btn btn-default" onclick="Add-Database">Register</button>
             </form>
         </div>
     </div>
