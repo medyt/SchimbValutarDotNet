@@ -11,6 +11,7 @@ using Domain_Entities.AccountViewModels;
 using UI.MVC.Services;
 using UI.MVC.Data;
 using System;
+using Microsoft.Extensions.DependencyModel.Resolution;
 
 namespace UI.MVC.Controllers
 {
@@ -72,33 +73,24 @@ namespace UI.MVC.Controllers
                     {
                         Response.Redirect("http://localhost:1927/Home/Owner", false);
                     }
-                    else
+                    else if (casier.AccesManager)
                     {
-                        if (casier.AccesManager)
-                        {
-                            Response.Redirect("http://localhost:1927/Home/Client", false);
-                        }
-                        else
-                        {
-                            if (casier.AccesEmployee)
-                            {
-                                Response.Redirect("http://localhost:1927/Tranzactie", false);
-                            }
-                        }
+                        Response.Redirect("http://localhost:1927/Home/Client", false);
+                    }
+                    else if (casier.AccesEmployee)
+                    {
+                        Response.Redirect("http://localhost:1927/Tranzactie", false);
                     }
                 }
                 else
                 {
-                    if (casier.Password != model.Password)
+                    if (casier != null && casier.Password != model.Password)
                     {
                         ModelState.AddModelError(string.Empty, "Wrong password");
                         return View(model);
                     }
-                    else
-                    {
-                        ModelState.AddModelError(string.Empty, "Invalid login attempt.");
-                        return View(model);
-                    }
+                    ModelState.AddModelError(string.Empty, "Invalid login attempt.");
+                    return View(model);
                 }
             }
 
