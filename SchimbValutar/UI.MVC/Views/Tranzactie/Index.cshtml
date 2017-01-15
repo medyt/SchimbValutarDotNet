@@ -3,6 +3,49 @@
 @{
     ViewData["Title"] = "Index";
 }
+<section class="alternate-section">
+    <div class="container">
+        <div class="col-md-6">
+            <h5><span>Online</span> <br />currency convertor</h5>
+            <p>Our currency calculator gives you real time figures based on Yahoo's currency rate.</p>
+        </div>
+        <div class="col-md-6">
+            <div class="currency-calculator">
+                <div class="field-row">
+                    <div class="curr-from">
+                        <label for="from">From:</label>
+                        <select name="from" id="from" class="form-control select-box">
+                            <option value="USD">USD</option>
+                            <option value="RON">RON</option>
+                            <option value="EUR">EUR</option>
+                            <option value="GBP">GBP</option>
+                        </select>
+                    </div>
+                    <div class="curr-to">
+                        <label for="to">To:</label>
+                        <select name="to" id="to" class="form-control select-box">
+                            <option value="RON">RON</option>
+                            <option value="USD">USD</option>
+                            <option value="EUR">EUR</option>
+                            <option value="GBP">GBP</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="field-row">
+                    <div class="amount-input">
+                        <label for="amount">Amount:</label>
+                        <input class="amount" type="text" readonly="readonly" name="amount" id="amount" value="1"/>
+                    </div>
+                    <div class="amount-output">
+                        <label for="amount">Amount:</label>
+                        <input class="output" type="text" readonly="readonly" name="output" id="output"/>
+                    </div>
+                </div>
+                <input type="button" name="submit" id="submit" value="convert" onclick="getRate(document.getElementById('from').value, document.getElementById('to').value)"/>
+            </div>
+        </div>
+    </div>
+</section>
 <section>
     <div class="container">
         <div class="col-md-12">
@@ -110,7 +153,6 @@
     </div>
 </section>
 
-<button onclick="getRate(document.getElementById('fromCurrency').value, document.getElementById('toCurrency').value)">Get Rate</button>
 <script type="text/javascript">
 
     function getRate(from, to) {
@@ -122,6 +164,6 @@
   function parseExchangeRate(data) {
     var name = data.query.results.row.name;
     var rate = parseFloat(data.query.results.row.rate, 10);
-    alert("Exchange rate " + name + " is " + rate);
+    document.getElementById('output').value = rate;
   }
 </script>

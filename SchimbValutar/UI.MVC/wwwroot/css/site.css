@@ -506,6 +506,69 @@ a.thumbnail {
         margin-bottom: 16px;
         margin-top: 0;
     }
+.currency-calculator {
+    margin-top: 42px;
+    margin-bottom: 30px;
+    position: relative;
+}
+.currency-calculator #submit {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 66px;
+    height: 66px;
+    border-radius: 50%;
+    background-color: #009393;
+    color: #fff;
+    border: none;
+    font-size: 12px;
+    text-transform: uppercase;
+    text-align: center;
+    transition: .5s;
+    font-weight: 600;
+    outline: none;
+}
+
+.currency-calculator #submit:hover {
+    background-color: #fff;
+    color: #00585f;
+}
+.currency-calculator .field-row {
+    margin-bottom: 8px;
+}
+.currency-calculator .field-row>div {
+    width: 48%;
+    display: inline-block;
+}
+.currency-calculator .field-row .curr-from label, .currency-calculator .field-row .curr-to label {
+    color: #fff;
+}
+.currency-calculator .field-row .curr-from {
+    margin-right: 15px;
+}
+.currency-calculator .field-row .amount-input label, .currency-calculator .field-row .amount-output label {
+    display: none;
+}
+.amount-input {
+    margin-right: 15px;
+}
+.amount-input .amount, .amount-output .output {
+    outline: none;
+    border-radius: 0;
+    margin: 0px 0px 20px;
+    width: 100%;
+    max-width: 100%;
+    display: block;
+    background: transparent;
+    border: 1px solid #fff;
+    padding: 0;
+    font-size: 60px;
+    text-align: center;
+    color: #ff3800;
+    margin-bottom: 0;
+    
+}
 
 table {
     width: 100%;
