@@ -29,6 +29,23 @@ textarea {
     max-width: 280px;
 }
 
+.col-md-12 {
+    margin: 0 !important;
+}
+
+.form-group {
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+}
+
+.less-left {
+    padding-left: 0;
+}
+
+.less-right {
+    padding-right: 0;
+}
+
 /* Carousel */
 .carousel-caption p {
     font-size: 20px;
@@ -82,7 +99,7 @@ textarea {
     margin: 34px 0;
 }
 
-.navbar-inverse .navbar-right > li > a:hover {
+    .navbar-inverse .navbar-right > li > a:hover {
         background: #f0f0f0;
         color: #00585f;
     }
@@ -112,6 +129,11 @@ textarea {
         bottom: 50%;
     }
 
+    #myCarousel .carousel-caption h1 {
+        font-size: 54px;
+        text-transform: uppercase;
+    }
+
 .exchange-rate-bar {
     height: 46px;
     background: #00585f;
@@ -122,7 +144,7 @@ textarea {
     overflow: hidden;
 }
 
-.exchange-rate-bar li {
+    .exchange-rate-bar li {
         float: left;
         padding: 12px 12px 12px 24px;
         font-size: 16px;
@@ -136,6 +158,37 @@ textarea {
         padding: 6px 24px;
         font-size: 24px;
     }
+
+.transition-box {
+    box-sizing: border-box;
+    width: 100%;
+}
+
+    .transition-box .heading {
+        font-size: 30px;
+        text-transform: uppercase;
+        color: #fff;
+        font-weight: 800;
+        line-height: 28px;
+    }
+
+        .transition-box .heading span.subheading {
+            font-weight: 400;
+            font-size: 24px;
+        }
+
+.transition-box-left {
+    background: #009393;
+    color: #fff;
+    padding: 28px 25px;
+}
+
+.transition-box-right {
+    background: #00585f;
+    padding: 34px;
+    min-height: 114px;
+    height: 100%;
+}
 
 .currency-table {
     background: #009393;
@@ -154,13 +207,16 @@ section {
     background: #00585f;
     padding: 0;
 }
+
     .alternate-section p {
         color: #fff;
     }
+
     .alternate-section .btn.btn-default {
         background-color: #fff;
         color: #00585f;
     }
+
     .alternate-section h5 {
         color: #fff;
         margin-top: 50px;
@@ -229,7 +285,7 @@ h5 {
         transition: .4s;
     }
 
-.service .title-section .icon {
+        .service .title-section .icon {
             background-color: #FF3800;
             width: 50px;
             height: 50px;
@@ -287,13 +343,15 @@ h5 {
     overflow: hidden;
     margin-bottom: 50px;
 }
+
     .client-box .thumbnail {
         border: none;
-    padding: 0;
-    margin-bottom: 0;
+        padding: 0;
+        margin-bottom: 0;
         width: 350px;
         height: 230px;
     }
+
     .client-box:hover .title-section {
         height: 100%;
         cursor: pointer;
@@ -310,7 +368,7 @@ h5 {
         transition: .4s;
     }
 
-.client-box .title-section .icon {
+        .client-box .title-section .icon {
             background-color: #FF3800;
             width: 50px;
             height: 50px;
@@ -390,7 +448,7 @@ a.thumbnail {
         transition: 0.4s;
     }
 
-.blog-item .image .overlay span {
+        .blog-item .image .overlay span {
             position: absolute;
             width: 50px;
             height: 50px;
@@ -413,49 +471,58 @@ a.thumbnail {
     .blog-item .image:hover .overlay {
         opacity: 1;
     }
+
 .blog-item .title {
     margin: 10px 0;
 }
-.blog-item .title a {
-    font-size: 18px;
-    color: #fff;
-    font-weight: 600;
-}
+
+    .blog-item .title a {
+        font-size: 18px;
+        color: #fff;
+        font-weight: 600;
+    }
+
 .blog-item .date {
     color: #ff3800;
     font-size: 14px;
     margin-right: 5px;
     margin-top: -2px;
 }
-.blog-item .date i {
+
+    .blog-item .date i {
         font-size: 20px;
-    margin-right: 5px;
-    line-height: 25px;
-}
+        margin-right: 5px;
+        line-height: 25px;
+    }
+
 .currency-table {
     padding: 40px 36px 36px 36px;
 }
-.currency-table h4 {
-    font-family: Raleway, Arial, Helvetica, sans-serif !important;
-    font-size: 17px ;
-    font-weight: 600 ;
-    margin-bottom: 16px;
-    margin-top: 0;
-}
+
+    .currency-table h4 {
+        font-family: Raleway, Arial, Helvetica, sans-serif !important;
+        font-size: 17px;
+        font-weight: 600;
+        margin-bottom: 16px;
+        margin-top: 0;
+    }
+
 table {
     width: 100%;
 }
-table tr {
-    height: 35px;
-    line-height: 35px;
-    border-top: 1px solid #fff;
-}
-table td {
-    background: transparent !important;
-    font-size: 15px;
-    text-align: center;
-    border:none;
-}
+
+    table tr {
+        height: 35px;
+        line-height: 35px;
+        border-top: 1px solid #fff;
+    }
+
+    table td {
+        background: transparent !important;
+        font-size: 15px;
+        text-align: center;
+        border: none;
+    }
 
 /* Hide/rearrange for smaller screens */
 @media screen and (max-width: 767px) {
@@ -484,7 +551,7 @@ table td {
             overflow: hidden;
         }
 
-    .navbar-inverse .navbar-nav li a {
+            .navbar-inverse .navbar-nav li a {
                 color: #fff;
                 padding: 10px 15px;
             }
@@ -508,3 +575,10 @@ table td {
                 color: #009393;
             }
 }
+
+@media screen and (min-width: 768px) {
+    #myCarousel .carousel-indicators {
+        z-index: unset;
+    }
+}
+
