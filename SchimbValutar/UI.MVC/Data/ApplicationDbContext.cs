@@ -12,14 +12,6 @@ namespace UI.MVC.Data
         {
         }
 
-        protected override void OnModelCreating(ModelBuilder builder)
-        {
-            base.OnModelCreating(builder);
-            // Customize the ASP.NET Identity model and override the defaults if needed.
-            // For example, you can rename the ASP.NET Identity table names and more.
-            // Add your customizations after calling base.OnModelCreating(builder);
-        }
-
         public DbSet<Casier> Casier { get; set; }
 
         public DbSet<Card> Card { get; set; }
@@ -34,6 +26,8 @@ namespace UI.MVC.Data
 
         public DbSet<Valuta> Valuta { get; set; }
 
-        public DbSet<Tranzactie> Tranzatii { get; set; }
+        public DbSet<Tranzactie> Tranzactii { get; set; }
+
+        public DbSet<CursValutar> CursValutar { get; set; }
     }
 }

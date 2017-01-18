@@ -1,6 +1,5 @@
-﻿@{
-    ViewData["Title"] = "Client";
-}
+﻿@model UI.MVC.Models.CursValutarDto
+
 <section>
     <div class="container">
         <div class="col-md-12">
@@ -38,35 +37,45 @@
             <p>At the start of the day you can establish the buying and selling exchange rates for your cash desks.</p>
         </div>
         <div class="col-md-12">
-            <form>
+            <form asp-controller="Home" asp-action="Index" method="post">
                 <h3>Selling rates:</h3>
                 <div class="form-group">
-                    <label for="eurotoron">One euro to ron</label>
-                    <input type="number" class="form-control" id="eurotoron">
+                    <label asp-for="SellingEuroToRon" class="control-label"></label>
+                    <input asp-for="SellingEuroToRon" class="form-control" />
+                    <span asp-validation-for="SellingEuroToRon" class="text-danger"></span>
                 </div>
                 <div class="form-group">
-                    <label for="usdtoron">One usd to ron</label>
-                    <input type="number" class="form-control" id="usdtoron">
+                    <label asp-for="SellingGbpToRon" class="control-label"></label>
+                    <input asp-for="SellingGbpToRon" class="form-control" />
+                    <span asp-validation-for="SellingGbpToRon" class="text-danger"></span>
                 </div>
                 <div class="form-group">
-                    <label for="gbptoron">One gbp to ron</label>
-                    <input type="number" class="form-control" id="gbptoron">
+                    <label asp-for="SellingUsdToRon" class="control-label"></label>
+                    <input asp-for="SellingUsdToRon" class="form-control" />
+                    <span asp-validation-for="SellingUsdToRon" class="text-danger"></span>
                 </div>
                 <h3>Buying rates:</h3>
                 <div class="form-group">
-                    <label for="eurotoron">One euro to ron</label>
-                    <input type="number" class="form-control" id="eurotoron">
+                    <label asp-for="BuyingEuroToRon" class="control-label"></label>
+                    <input asp-for="BuyingEuroToRon" class="form-control" />
+                    <span asp-validation-for="BuyingEuroToRon" class="text-danger"></span>
                 </div>
                 <div class="form-group">
-                    <label for="usdtoron">One usd to ron</label>
-                    <input type="number" class="form-control" id="usdtoron">
+                    <label asp-for="BuyingGbpToRon" class="control-label"></label>
+                    <input asp-for="BuyingGbpToRon" class="form-control" />
+                    <span asp-validation-for="BuyingGbpToRon" class="text-danger"></span>
                 </div>
                 <div class="form-group">
-                    <label for="gbptoron">One gbp to ron</label>
-                    <input type="number" class="form-control" id="gbptoron">
+                    <label asp-for="BuyingUsdToRon" class="control-label"></label>
+                    <input asp-for="BuyingUsdToRon" class="form-control" />
+                    <span asp-validation-for="BuyingUsdToRon" class="text-danger"></span>
                 </div>
                 <button type="submit" class="btn btn-default">Submit</button>
             </form>
         </div>
     </div>
 </section>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

@@ -12,6 +12,7 @@ using UI.MVC.Services;
 using UI.MVC.Data;
 using System;
 using Microsoft.Extensions.DependencyModel.Resolution;
+using UI.MVC.Models;
 
 namespace UI.MVC.Controllers
 {
@@ -173,6 +174,7 @@ namespace UI.MVC.Controllers
             // If we got this far, something failed, redisplay form
             return View(model);
         }
+
 
         //
         // POST: /Account/LogOff
@@ -492,11 +494,6 @@ namespace UI.MVC.Controllers
             {
                 ModelState.AddModelError(string.Empty, error.Description);
             }
-        }
-
-        private Task<ApplicationUser> GetCurrentUserAsync()
-        {
-            return _userManager.GetUserAsync(HttpContext.User);
         }
 
         private IActionResult RedirectToLocal(string returnUrl)

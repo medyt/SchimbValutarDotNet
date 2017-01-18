@@ -1,2 +1,17 @@
-#:C:\Users\Teodor\Documents\GitHub\SchimbValutarDotNet\SchimbValutar\UI.MVC\UI.MVC.xproj
-C:\Users\Teodor\Documents\GitHub\SchimbValutarDotNet\SchimbValutar\UI.MVC\UI.MVC.xproj|C:\Users\Teodor\Documents\GitHub\SchimbValutarDotNet\SchimbValutar\Domain Entities\Domain Entities.xproj
+#:C:\Facultate\Anul 3 Sem 1\dot NET\SchimbValutarDotNet\SchimbValutar\Infrastructure.Data\Infrastructure.Data.xproj
+C:\Facultate\Anul 3 Sem 1\dot NET\SchimbValutarDotNet\SchimbValutar\Infrastructure.Data\Infrastructure.Data.xproj|C:\Facultate\Anul 3 Sem 1\dot NET\SchimbValutarDotNet\SchimbValutar\DatabaseSettings\DatabaseSettings.xproj
+C:\Facultate\Anul 3 Sem 1\dot NET\SchimbValutarDotNet\SchimbValutar\Infrastructure.Data\Infrastructure.Data.xproj|C:\Facultate\Anul 3 Sem 1\dot NET\SchimbValutarDotNet\SchimbValutar\Domain Entities\Domain Entities.xproj
+C:\Facultate\Anul 3 Sem 1\dot NET\SchimbValutarDotNet\SchimbValutar\Infrastructure.Data\Infrastructure.Data.xproj|C:\Facultate\Anul 3 Sem 1\dot NET\SchimbValutarDotNet\SchimbValutar\Domain Interfaces\Domain Interfaces.xproj
+C:\Facultate\Anul 3 Sem 1\dot NET\SchimbValutarDotNet\SchimbValutar\Infrastructure.Data\Infrastructure.Data.xproj|C:\Facultate\Anul 3 Sem 1\dot NET\SchimbValutarDotNet\SchimbValutar\Infrastructure.Contexts\Infrastructure.Contexts.xproj
+C:\Facultate\Anul 3 Sem 1\dot NET\SchimbValutarDotNet\SchimbValutar\Domain Interfaces\Domain Interfaces.xproj|C:\Facultate\Anul 3 Sem 1\dot NET\SchimbValutarDotNet\SchimbValutar\Domain Entities\Domain Entities.xproj
+C:\Facultate\Anul 3 Sem 1\dot NET\SchimbValutarDotNet\SchimbValutar\Infrastructure.Contexts\Infrastructure.Contexts.xproj|C:\Facultate\Anul 3 Sem 1\dot NET\SchimbValutarDotNet\SchimbValutar\DatabaseSettings\DatabaseSettings.xproj
+C:\Facultate\Anul 3 Sem 1\dot NET\SchimbValutarDotNet\SchimbValutar\Infrastructure.Contexts\Infrastructure.Contexts.xproj|C:\Facultate\Anul 3 Sem 1\dot NET\SchimbValutarDotNet\SchimbValutar\Domain Entities\Domain Entities.xproj
+#:C:\Facultate\Anul 3 Sem 1\dot NET\SchimbValutarDotNet\SchimbValutar\UI.WebApi\UI.WebApi.xproj
+C:\Facultate\Anul 3 Sem 1\dot NET\SchimbValutarDotNet\SchimbValutar\UI.WebApi\UI.WebApi.xproj|C:\Facultate\Anul 3 Sem 1\dot NET\SchimbValutarDotNet\SchimbValutar\Infrastructure.Data\Infrastructure.Data.xproj
+C:\Facultate\Anul 3 Sem 1\dot NET\SchimbValutarDotNet\SchimbValutar\Infrastructure.Data\Infrastructure.Data.xproj|C:\Facultate\Anul 3 Sem 1\dot NET\SchimbValutarDotNet\SchimbValutar\DatabaseSettings\DatabaseSettings.xproj
+C:\Facultate\Anul 3 Sem 1\dot NET\SchimbValutarDotNet\SchimbValutar\Infrastructure.Data\Infrastructure.Data.xproj|C:\Facultate\Anul 3 Sem 1\dot NET\SchimbValutarDotNet\SchimbValutar\Domain Entities\Domain Entities.xproj
+C:\Facultate\Anul 3 Sem 1\dot NET\SchimbValutarDotNet\SchimbValutar\Infrastructure.Data\Infrastructure.Data.xproj|C:\Facultate\Anul 3 Sem 1\dot NET\SchimbValutarDotNet\SchimbValutar\Domain Interfaces\Domain Interfaces.xproj
+C:\Facultate\Anul 3 Sem 1\dot NET\SchimbValutarDotNet\SchimbValutar\Infrastructure.Data\Infrastructure.Data.xproj|C:\Facultate\Anul 3 Sem 1\dot NET\SchimbValutarDotNet\SchimbValutar\Infrastructure.Contexts\Infrastructure.Contexts.xproj
+C:\Facultate\Anul 3 Sem 1\dot NET\SchimbValutarDotNet\SchimbValutar\Domain Interfaces\Domain Interfaces.xproj|C:\Facultate\Anul 3 Sem 1\dot NET\SchimbValutarDotNet\SchimbValutar\Domain Entities\Domain Entities.xproj
+C:\Facultate\Anul 3 Sem 1\dot NET\SchimbValutarDotNet\SchimbValutar\Infrastructure.Contexts\Infrastructure.Contexts.xproj|C:\Facultate\Anul 3 Sem 1\dot NET\SchimbValutarDotNet\SchimbValutar\DatabaseSettings\DatabaseSettings.xproj
+C:\Facultate\Anul 3 Sem 1\dot NET\SchimbValutarDotNet\SchimbValutar\Infrastructure.Contexts\Infrastructure.Contexts.xproj|C:\Facultate\Anul 3 Sem 1\dot NET\SchimbValutarDotNet\SchimbValutar\Domain Entities\Domain Entities.xproj

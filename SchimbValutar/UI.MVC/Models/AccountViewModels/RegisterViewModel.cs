@@ -10,12 +10,12 @@ namespace Domain_Entities.AccountViewModels
         public string Type { get; set; }
 
         [Required]
-        [StringLength(20, ErrorMessage = "The {0} must be at least {2} and at max {1} characters long.", MinimumLength = 6)]
+        [StringLength(20, ErrorMessage = "The {0} must be at least {2} and at max {1} characters long.", MinimumLength = 3)]
         [Display(Name = "Name")]
         public string Name { get; set; }
 
         [Required]
-        [StringLength(20, ErrorMessage = "The {0} must be at least {2} and at max {1} characters long.", MinimumLength = 6)]
+        [StringLength(20, ErrorMessage = "The {0} must be at least {2} and at max {1} characters long.", MinimumLength = 3)]
         [Display(Name = "LastName")]
         public string LastName { get; set; }
 
