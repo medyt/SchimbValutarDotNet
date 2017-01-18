@@ -53,7 +53,7 @@
             <p>Fill in the fields and submit transaction</p>
         </div>
         <div class="col-md-12">
-            <form asp-action="Index" method="post">
+            <form asp-action="Index" method="post" id="target">
                 <div class="form-horizontal">
                     <hr />
                     <div asp-validation-summary="ModelOnly" class="text-danger"></div>
@@ -122,14 +122,10 @@
                         <span asp-validation-for="SumaDatorata" class="text-danger" />
                     </div>
                     <div class="form-group">
-                            <input type="submit" value="Create" class="btn btn-default" />
+                            <input type="submit" value ="Create" class="btn btn-default" />
                     </div>
                 </div>
             </form>
-
-            <div>
-                <a asp-action="Index">Back to List</a>
-            </div>
         </div>
     </div>
 </section>
@@ -146,7 +142,7 @@
         <div class="col-md-12">
             <form>
                 <div class="form-group">
-                    <button type="submit" class="btn btn-default">Print receipt</button>
+                    <button type="submit" id="cmd" class="btn btn-default">Print receipt</button>
                 </div>
             </form>
         </div>
@@ -166,4 +162,37 @@
     var rate = parseFloat(data.query.results.row.rate, 10);
     document.getElementById('output').value = rate;
   }
+  
 </script>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<script type="text/javascript" src="https://code.jquery.com/ui/1.12.0-beta.1/jquery-ui.min.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.1.135/jspdf.min.js"></script>
+<script type="text/javascript" src="http://cdn.uriit.ru/jsPDF/libs/adler32cs.js/adler32cs.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2014-11-29/FileSaver.min.js
+"></script>
+<script type="text/javascript" src="libs/Blob.js/BlobBuilder.js"></script>
+<script type="text/javascript" src="http://cdn.immex1.com/js/jspdf/plugins/jspdf.plugin.addimage.js"></script>
+<script type="text/javascript" src="http://cdn.immex1.com/js/jspdf/plugins/jspdf.plugin.standard_fonts_metrics.js"></script>
+<script type="text/javascript" src="http://cdn.immex1.com/js/jspdf/plugins/jspdf.plugin.split_text_to_size.js"></script>
+<script type="text/javascript" src="http://cdn.immex1.com/js/jspdf/plugins/jspdf.plugin.from_html.js"></script>
+<script type="text/javascript" src="js/basic.js"></script>
+<script>
+    $(function () {
+
+        var specialElementHandlers = {
+            '#editor': function (element, renderer) {
+                return true;
+            }
+        };
+        $('#cmd').click(function () {
+            var doc = new jsPDF();
+            doc.fromHTML($('#target').html(), 15, 15, {
+                'width': 170, 'elementHandlers': specialElementHandlers
+            });
+            doc.save('sample-file.pdf');
+        });
+    });
+</script>
+
+
