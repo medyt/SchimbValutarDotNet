@@ -143,40 +143,43 @@
 <section class="alternate-section">
     <div class="container">
         <div class="col-md-8">
-            <h5><span>Upcoming</span><br />latest news</h5>
-            <div class="row">
-                <div class="blog-item col-sm-4">
-                    <div class="image">
-                        <a href="#">
-                            <img src="http://monex.janxcode.com/wp-content/uploads/2016/04/stock-9-380x256.jpg" class="img-responsive" alt="">
-                            <div class="overlay"><span>+</span></div>
-                        </a>
+            <h5><span>Online</span> <br />currency convertor</h5>
+            <p>Our currency calculator gives you real time figures based on Yahoo's currency rate.</p>
+            <div class="currency-calculator">
+                <div class="field-row">
+                    <div class="curr-from">
+                        <label for="from">From:</label>
+                        <select name="from" id="from" class="form-control select-box">
+                            <option value="USD">USD</option>
+                            <option value="RON">RON</option>
+                            <option value="EUR">EUR</option>
+                            <option value="GBP">GBP</option>
+                        </select>
                     </div>
-                    <div class="title"><a href="#">Considerations Before Investing</a></div>
-                    <div class="date"><i class="fa fa-clock-o"></i> April 9, 2016</div>
-                </div>
-                <div class="blog-item col-sm-4">
-                    <div class="image">
-                        <a href="#">
-                            <img src="http://monex.janxcode.com/wp-content/uploads/2016/04/stock-12-380x256.jpg" class="img-responsive" alt="">
-                            <div class="overlay"><span>+</span></div>
-                        </a>
+                    <div class="curr-to">
+                        <label for="to">To:</label>
+                        <select name="to" id="to" class="form-control select-box">
+                            <option value="RON">RON</option>
+                            <option value="USD">USD</option>
+                            <option value="EUR">EUR</option>
+                            <option value="GBP">GBP</option>
+                        </select>
                     </div>
-                    <div class="title"><a href="#">Australian market set to open lower</a></div>
-                    <div class="date"><i class="fa fa-clock-o"></i> April 9, 2016</div>
                 </div>
-                <div class="blog-item col-sm-4">
-                    <div class="image">
-                        <a href="#">
-                            <img src="http://monex.janxcode.com/wp-content/uploads/2016/04/stock-6-1-380x256.jpg" class="img-responsive" alt="">
-                            <div class="overlay"><span>+</span></div>
-                        </a>
+                <div class="field-row">
+                    <div class="amount-input">
+                        <label for="amount">Amount:</label>
+                        <input class="amount" type="text" readonly="readonly" name="amount" id="amount" value="1" />
                     </div>
-                    <div class="title"><a href="#">Finance news you need to know today</a></div>
-                    <div class="date"><i class="fa fa-clock-o"></i> April 9, 2016</div>
+                    <div class="amount-output">
+                        <label for="amount">Amount:</label>
+                        <input class="output" type="text" readonly="readonly" name="output" id="output" />
+                    </div>
                 </div>
+                <input type="button" name="submit" id="submit" value="convert" onclick="getRate(document.getElementById('from').value, document.getElementById('to').value)" />
             </div>
         </div>
+        
         <div class="col-md-4">
             <div class="currency-table">
                 <h4>US Dollar Exchange Rates</h4>
@@ -222,6 +225,23 @@
                 </table>
             </div>
         </div>
+            
     </div>
 
 </section>
+
+<script type="text/javascript">
+
+    function getRate(from, to) {
+    var script = document.createElement('script');
+    script.setAttribute('src', "http://query.yahooapis.com/v1/public/yql?q=select%20rate%2Cname%20from%20csv%20where%20url%3D'http%3A%2F%2Fdownload.finance.yahoo.com%2Fd%2Fquotes%3Fs%3D"+from+to+"%253DX%26f%3Dl1n'%20and%20columns%3D'rate%2Cname'&format=json&callback=parseExchangeRate");
+    document.body.appendChild(script);
+  }
+
+  function parseExchangeRate(data) {
+    var name = data.query.results.row.name;
+    var rate = parseFloat(data.query.results.row.rate, 10);
+    document.getElementById('output').value = rate;
+  }
+</script>
+

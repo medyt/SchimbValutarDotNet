@@ -545,13 +545,13 @@ a.thumbnail {
     color: #fff;
 }
 .currency-calculator .field-row .curr-from {
-    margin-right: 15px;
+    margin-right: 2%;
 }
 .currency-calculator .field-row .amount-input label, .currency-calculator .field-row .amount-output label {
     display: none;
 }
 .amount-input {
-    margin-right: 15px;
+    margin-right: 2%;
 }
 .amount-input .amount, .amount-output .output {
     outline: none;
