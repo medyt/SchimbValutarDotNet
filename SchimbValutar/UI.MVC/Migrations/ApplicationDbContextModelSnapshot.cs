@@ -407,19 +407,19 @@ namespace UI.MVC.Migrations
                     b.Property<Guid>("Id")
                         .ValueGeneratedOnAdd();
 
-                    b.Property<decimal>("BuyingEuroToRon");
+                    b.Property<float>("BuyingEuroToRon");
 
-                    b.Property<decimal>("BuyingGbpToRon");
+                    b.Property<float>("BuyingGbpToRon");
 
-                    b.Property<decimal>("BuyingUsdToRon");
+                    b.Property<float>("BuyingUsdToRon");
 
                     b.Property<bool>("IsDeleted");
 
-                    b.Property<decimal>("SellingEuroToRon");
+                    b.Property<float>("SellingEuroToRon");
 
-                    b.Property<decimal>("SellingGbpToRon");
+                    b.Property<float>("SellingGbpToRon");
 
-                    b.Property<decimal>("SellingUsdToRon");
+                    b.Property<float>("SellingUsdToRon");
 
                     b.HasKey("Id");
 
